@@ -18,30 +18,34 @@ module.exports = () => {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: './src/index.html',
+        template: './index.html',
         chunks: ['main'], 
       }),
-      new HtmlWebpackPlugin({
-        template: './src/install.html',
-        filename: 'install.html', 
-        chunks: ['install'], 
-      }),
+      // new HtmlWebpackPlugin({
+      //   template: './src/install.html',
+      //   filename: 'install.html', 
+      //   chunks: ['install'], 
+      // }),
       new WebpackPwaManifest({
-        name: 'Your App Name',
-        short_name: 'App Name',
-        description: 'Your app description.',
-        background_color: '#ffffff',
-        theme_color: '#000000',
+        fingerprints: false,
+        inject: true,
+        name: 'Just another text editor',
+        short_name: 'J.A.T.E',
+        description: 'Takes notes with JavaScript highlighting!',
+        background_color: '#225ca3',
+        theme_color: '#225ca3',
+        start_url: './',
+        publicPath: './',
         icons: [
           {
-            src: path.resolve('src/icon.png'),
+            src: path.resolve('./src/images/logo.png'),
             sizes: [96, 128, 192, 256, 384, 512],
             destination: path.join('assets', 'icons'),
           },
         ],
       }),
       new InjectManifest({
-        swSrc: './src/js/src-sw.js', 
+        swSrc: './src-sw.js', 
        
       }),
     ],
