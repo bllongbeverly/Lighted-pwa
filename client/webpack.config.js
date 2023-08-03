@@ -20,11 +20,7 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
-        chunks: ['main'], 
-      }),
-      new HtmlWebpackPlugin({
-        template: './index.html',
-        title: 'Editor'
+        title: 'J.A.T.E' 
       }),
       new WebpackPwaManifest({
         fingerprints: false,
@@ -46,7 +42,7 @@ module.exports = () => {
       }),
       new InjectManifest({
         swSrc: './src-sw.js', 
-       
+        swDest: 'src-sw.js'
       }),
     ],
     module: {
