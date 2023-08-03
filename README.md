@@ -1,12 +1,17 @@
 # Lighted-pwa
 
-## User Story
+## Description
 
+ I used a Progressive Web Apps (PWAs)  to represent a modern and innovative approach to building web applications that offer users an enhanced experience, combining the best features of both web and native apps. A PWA is designed to be reliable, fast, and engaging, allowing users to interact with it seamlessly, regardless of their network connectivity.
+```
+## User Story
+```
 AS A developer
 I WANT to create notes or code snippets with or without an internet connection
 SO THAT I can reliably retrieve them for later use.
-
+```
 ## Acceptance Criteria
+```
 
 GIVEN a text editor web application
 WHEN I open my application in my editor
@@ -33,6 +38,11 @@ WHEN I register a service worker
 THEN I should have my static assets pre cached upon loading along with subsequent pages and static assets
 WHEN I deploy to Heroku
 THEN I should have proper build scripts for a webpack application.
+
+```
+## Image
+
+![screenshot](./Screenshot%202023-08-03%20183519.png)
 
 ## Sources
 
